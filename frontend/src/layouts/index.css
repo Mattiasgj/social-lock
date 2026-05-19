@@ -1,25 +1,25 @@
 :root {
 	/* Your original base */
-	--background-color: #121212;
-	--text-color: #E0E0E0;
+	--background-color: #001B2F;
+	--text-color: #E8F6FF;
 
 	/* Text hierarchy */
-	--text-heading: #F5F5F5;      
-	--text-muted: #cccccc;
-	--text-more-muted: #bdbdbd;
+	--text-heading: #F1F9FF;
+	--text-muted: #9CB7D1;
+	--text-more-muted: #6F8FA9;
 
-	--surface-lowest: #1a1a1a;    
-	--surface-card: #242424;      
-	--border-color: #2d2d2d;      
+	--surface-lowest: #07131F;
+	--surface-card: #142B41;
+	--border-color: #1E4F76;
 
 	/* Accents & Actions */
-	--accent-primary: #4fd1c5;     
-	--accent-hover: #38b2ac;       
-	--accent-secondary: #0066FF;   
+	--accent-primary: #61B4E8;
+	--accent-hover: #4A90D9;
+	--accent-secondary: #82D8FF;
 	
 	/* Feedback states */
-	--error: #fc8181;           
-	--success: #68d391;            
+	--error: #F76B6B;
+	--success: #57C58D;
 }
 
 
