@@ -1,6 +1,8 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { Mail, Laptop, Link2, Book, SquareTerminal } from "lucide-react";
+import LinkedIn from "../../assets/linkedin.svg";
+import Github from "../../assets/github.svg";
 
 function Navbar() {
 	return (
@@ -8,8 +10,9 @@ function Navbar() {
 			<Link className={styles.name} to="/">
 				Mattias Gil Johansson
 			</Link>
-			<Link to="/terminal">
-				Terminal <SquareTerminal />
+			<Link to="https://www.linkedin.com/in/mattias-gil-johansson-2053b4212/">
+				LinkedIn
+				<img className={styles.icon} src={LinkedIn} alt="LinkedIn" />
 			</Link>
 			<Link to="/education">
 				Education <Book />
@@ -21,7 +24,11 @@ function Navbar() {
 				Contact Me <Mail />
 			</Link>
 			<Link to="https://github.com/Mattiasgj">
-				Github <Link2 />
+				Github
+				<img className={styles.icon} src={Github} alt="Github" />
+			</Link>
+			<Link to="/terminal">
+				Terminal <SquareTerminal />
 			</Link>
 		</nav>
 	);

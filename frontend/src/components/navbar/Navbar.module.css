@@ -46,3 +46,8 @@
 	color: var(--accent-hover);
 	transform: translateX(1.8px);
 }
+
+.navbar .icon {
+	width: 17px;
+	height: 17px;
+}

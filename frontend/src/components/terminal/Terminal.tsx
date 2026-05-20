@@ -4,7 +4,47 @@ import { useState } from "react";
 
 export function Terminal() {
 	const [input, setInput] = useState("");
-	const [output, setOutput] = useState("");
+	const [history, setHistory] = useState([
+		"Mattias [Version 10.0.19045.7291] (c) MGJ Corporation.",
+		"All rights reserved.",
+		"",
+		"Type 'help' for a list of commands.",
+		"",
+	]);
+
+	function handleCommand() {
+		if (!input.trim()) return;
+
+		let response = "";
+
+		switch (input.toLowerCase()) {
+			case "help":
+				response = "Available commands: help, skills, clear";
+				break;
+
+			case "skills":
+				response =
+					"C# ASP.NET, Node.js Express, Python Django, Postgresql, Mysql, Mongodb Nosql, React";
+				break;
+
+			case "clear":
+				setHistory([]);
+				setInput("");
+				return;
+
+			default:
+				response = `Unknown command: ${input}`;
+		}
+
+		setHistory((prev) => [
+			...prev,
+			`C:\\Users\\gillm> ${input}`,
+			response,
+			"",
+		]);
+
+		setInput("");
+	}
 
 	return (
 		<div className={styles.wrapper}>
@@ -12,28 +52,29 @@ export function Terminal() {
 				<SquareTerminal />
 				Terminal
 			</div>
+
 			<div className={styles.terminal}>
-				<p>
-					Mattias [Version 10.0.19045.7291] (c) MGJ Corporation.
-					<br />
-					All rights reserved.
-				</p>
-				<p>Type 'help' for a list of commands.</p>
+				{history.map((line, index) => (
+					<div key={index} className={styles.line}>
+						{line}
+					</div>
+				))}
+
 				<div className={styles.commandline}>
 					<span>C:\Users\gillm&gt;</span>
+
 					<input
+						autoFocus
 						type="text"
 						value={input}
 						onChange={(e) => setInput(e.target.value)}
 						onKeyDown={(e) => {
 							if (e.key === "Enter") {
-								setOutput("output");
-								setInput("");
+								handleCommand();
 							}
 						}}
 					/>
 				</div>
-				<div className={styles.output}>{output}</div>
 			</div>
 		</div>
 	);

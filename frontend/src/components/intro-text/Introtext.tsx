@@ -9,12 +9,15 @@ function Introtext() {
 				I'm a <span>backend</span> developer
 			</p>
 			<p className={styles.details}>
-				I specialize in building backend systems and APIs using C#
-				ASP.NET Core, Node.js Express, and Python Django. I have
-				experience with databases such as MongoDB, MySQL, and PostgreSQL
-				I am passionate about writing clean, efficient, and scalable
-				code.
+				I specialize in building backend systems and APIs.
 			</p>
+			<div className={styles.skills}>
+				<p>C# ASP.NET Core, Node.js Express, and Python Django.</p>
+				<p>
+					Experience with databases such as MongoDB, MySQL, and
+					PostgreSQL
+				</p>
+			</div>
 		</div>
 	);
 }
