@@ -19,7 +19,7 @@ export function Terminal() {
 
 		switch (input.toLowerCase()) {
 			case "help":
-				response = "Available commands: help, skills, clear";
+				response = "Available commands: help, skills, projects, clear";
 				break;
 
 			case "skills":
@@ -27,6 +27,10 @@ export function Terminal() {
 					"C# ASP.NET, Node.js Express, Python Django, Postgresql, Mysql, Mongodb Nosql, React";
 				break;
 
+			case "projects":
+				response = "Personal website: Github: https://github.com/Mattiasgj/Mattias-web";
+				break;
+			
 			case "clear":
 				setHistory([]);
 				setInput("");

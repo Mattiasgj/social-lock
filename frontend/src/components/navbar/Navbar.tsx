@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-import { Mail, Laptop, Link2, Book, SquareTerminal } from "lucide-react";
+import { Mail, Laptop, Book, SquareTerminal } from "lucide-react";
 import LinkedIn from "../../assets/linkedin.svg";
 import Github from "../../assets/github.svg";
 

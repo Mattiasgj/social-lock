@@ -44,10 +44,15 @@
 
 .navbar a:hover svg {
 	color: var(--accent-hover);
-	transform: translateX(1.8px);
+	transform: translateY(-2px);
 }
 
 .navbar .icon {
 	width: 17px;
 	height: 17px;
+	transition: transform 0.2s ease;
+}
+
+.navbar a:hover .icon {
+	transform: translateY(-2px);
 }
