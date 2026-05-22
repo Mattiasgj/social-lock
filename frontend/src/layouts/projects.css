@@ -1,5 +1,5 @@
 /* MAIN GRID */
-.about-grid{
+.projects-grid{
     display: grid;
     grid-template-areas: 
     "navbar navbar"
