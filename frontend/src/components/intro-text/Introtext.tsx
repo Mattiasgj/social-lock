@@ -4,7 +4,7 @@ function Introtext() {
 	return (
 		<div className={styles.introtext}>
 			<h2>HI, I AM</h2>
-			<h1>Mattias</h1>
+			<img src="./src/assets/MATTIAS.svg" alt="mattias" />
 			<p className={styles.description}>
 				I'm a <span>backend</span> developer
 			</p>

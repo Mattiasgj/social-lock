@@ -33,5 +33,9 @@ html, body {
   margin: 0;          
   padding: 0;
   height: 100%;
-  font-family: 'Ubuntu', sans-serif;
+}
+
+@font-face {
+  font-family: "Upheaval";
+  src: url("../assets/fonts/upheaval/upheavtt.ttf") format("truetype");
 }
