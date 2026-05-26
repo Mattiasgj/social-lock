@@ -43,5 +43,6 @@ export async function getRecentCommits() {
 		body: JSON.stringify({ query }),
 	});
 
-	return response;
+	const data = await response.json();
+	return data;
 }
