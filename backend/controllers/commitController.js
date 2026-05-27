@@ -6,9 +6,11 @@ export async function fetchCommitsController(req, res) {
 
 		const repositories = result.data.viewer.repositories.nodes;
 
-		const commits = repositories.map((repo) => {
+		const commitsRepo = repositories.map((repo) => {
 			return repo.defaultBranchRef.target.history.nodes;
 		});
+
+		const commits = commitsRepo.flat();
 
 		return res.status(200).json(commits);
 	} catch (err) {
